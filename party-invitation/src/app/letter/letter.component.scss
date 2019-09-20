@@ -12,3 +12,28 @@ p {
     line-height: 1.8em;
     margin-bottom: 1em !important;
 }
+
+h6 {
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+.divider {
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+p, img {
+    margin-top: 30px !important;
+    margin-bottom: 0px !important;
+}
+
+.letter-author {
+    font-family: 'Nanum Myeongjo';
+    margin-top: 40px !important;
+    color: gray;
+    text-align: right;
+}
