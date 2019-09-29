@@ -48,6 +48,10 @@ p, img {
         font-family: 'Nanum Gothic';
         font-weight: 700;
         line-height: 1.4em !important;
+
+        @media screen and (max-width: 600px) {
+            font-size: 2em;
+        }
     }
 }
 
@@ -58,21 +62,51 @@ p, img {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    div {
-        text-align: center;
-        p {
-            margin-top: 1em !important;
+    li {
+        div {
+            text-align: center;
+            p {
+                margin-top: 1em !important;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        flex-flow: column;
+        li {
+            div {
+                display: flex;
+                margin-top: 1em;
+                h6 {
+                    width: 30%;
+                    margin: 0 !important;
+                    align-self: center;
+                }
+                p {
+                    width: 70%;
+                    margin: 0 !important;
+                }
+            }
         }
     }
 }
+
 
 .section {
     margin-left: 3%;
     margin-right: 3%;
 
+    @media only screen and (max-width: 600px) {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
     h2 {
         font-size: 3em;
         font-weight: 800;
+        @media screen and (max-width: 600px) {
+            font-size: 1.5em;
+        }
     }
 
     button {
@@ -94,6 +128,9 @@ p, img {
         .first {
             margin-top: 0 !important;
         }
+        @media only screen and (max-width: 600px) {
+            padding: 1em;
+        }
     }
 
     .footer {
@@ -107,4 +144,20 @@ p, img {
             height: 2em;
         }
     }
+}
+
+br.selective {
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+}
+
+br.selective2 {
+    @media only screen and (min-width: 601px) {
+        display: none;
+    }
+}
+
+* {
+    word-break: keep-all;
 }
