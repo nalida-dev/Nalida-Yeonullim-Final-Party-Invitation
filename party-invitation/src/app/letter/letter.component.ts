@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { personalData } from '../personal';
 
 @Component({
   selector: 'app-letter',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LetterComponent implements OnInit {
 
-  constructor() { }
+  name: string
+  data: any
+
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.name = this.route.snapshot.paramMap.get('name').trim()
+    this.data = personalData[this.name]
   }
 
 }
