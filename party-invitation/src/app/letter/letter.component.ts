@@ -10,6 +10,7 @@ import { personalData } from '../personal';
 export class LetterComponent implements OnInit {
 
   name: string
+  type: string
   data: any
 
   constructor(
@@ -19,6 +20,7 @@ export class LetterComponent implements OnInit {
   ngOnInit() {
     this.name = this.route.snapshot.paramMap.get('name').trim()
     this.data = personalData[this.name]
+    this.type = this.data.type
   }
 
 }
